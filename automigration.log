@@ -1,0 +1,277 @@
+
+D:\automatedmigration>cd D:\automatedmigration\Partner 
+
+D:\automatedmigration\Partner>call loadcustomer.cmd 
+
+D:\automatedmigration\Partner>rem export NLS_LANG=AMERICAN_AMERICA.WE8ISO8859P1 
+
+D:\automatedmigration\Partner>set ORACLE_SID=ORCL 
+
+D:\automatedmigration\Partner>sqlplus c##staging2/canon @truncate.sql 
+
+SQL*Plus: Release 12.1.0.2.0 Production on Tue Sep 20 14:44:05 2016
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Last Successful login time: Tue Sep 20 2016 14:43:30 +02:00
+
+Connected to:
+Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+
+Table truncated.
+
+
+Table truncated.
+
+
+Table truncated.
+
+
+Table truncated.
+
+
+Table truncated.
+
+
+Table truncated.
+
+
+Table truncated.
+
+
+Table truncated.
+
+
+Table truncated.
+
+
+Table truncated.
+
+
+Commit complete.
+
+Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+D:\automatedmigration\Partner>echo 0 
+0
+
+D:\automatedmigration\Partner>if ERRORLEVEL 1 GOTO fout 
+
+D:\automatedmigration\Partner>sqlldr c##staging2/canon CustomerAccount.ctl 
+
+SQL*Loader: Release 12.1.0.2.0 - Production on Tue Sep 20 14:44:05 2016
+
+Copyright (c) 1982, 2014, Oracle and/or its affiliates.  All rights reserved.
+
+Path used:      Conventional
+Commit point reached - logical record count 28
+
+Table IMP_CA:
+  28 Rows successfully loaded.
+
+Check the log file:
+  CustomerAccount.log
+for more information about the load.
+
+D:\automatedmigration\Partner>if ERRORLEVEL 1 GOTO fout 
+
+D:\automatedmigration\Partner>sqlldr c##staging2/canon CustomerVAT.ctl 
+
+SQL*Loader: Release 12.1.0.2.0 - Production on Tue Sep 20 14:44:05 2016
+
+Copyright (c) 1982, 2014, Oracle and/or its affiliates.  All rights reserved.
+
+Path used:      Conventional
+Commit point reached - logical record count 27
+
+Table IMP_CV:
+  27 Rows successfully loaded.
+
+Check the log file:
+  CustomerVAT.log
+for more information about the load.
+
+D:\automatedmigration\Partner>if ERRORLEVEL 1 GOTO fout 
+
+D:\automatedmigration\Partner>sqlldr c##staging2/canon Address.ctl 
+
+SQL*Loader: Release 12.1.0.2.0 - Production on Tue Sep 20 14:44:05 2016
+
+Copyright (c) 1982, 2014, Oracle and/or its affiliates.  All rights reserved.
+
+Path used:      Conventional
+Commit point reached - logical record count 58
+Commit point reached - logical record count 116
+Commit point reached - logical record count 123
+
+Table IMP_AD:
+  123 Rows successfully loaded.
+
+Check the log file:
+  Address.log
+for more information about the load.
+
+D:\automatedmigration\Partner>if ERRORLEVEL 1 GOTO fout 
+
+D:\automatedmigration\Partner>sqlldr c##staging2/canon AddressRole.ctl 
+
+SQL*Loader: Release 12.1.0.2.0 - Production on Tue Sep 20 14:44:05 2016
+
+Copyright (c) 1982, 2014, Oracle and/or its affiliates.  All rights reserved.
+
+Path used:      Conventional
+Commit point reached - logical record count 64
+Commit point reached - logical record count 128
+Commit point reached - logical record count 192
+Commit point reached - logical record count 256
+Commit point reached - logical record count 280
+
+Table IMP_ADR:
+  280 Rows successfully loaded.
+
+Check the log file:
+  AddressRole.log
+for more information about the load.
+
+D:\automatedmigration\Partner>if ERRORLEVEL 1 GOTO fout 
+
+D:\automatedmigration\Partner>sqlldr c##staging2/canon CustomerRelation.ctl 
+
+SQL*Loader: Release 12.1.0.2.0 - Production on Tue Sep 20 14:44:05 2016
+
+Copyright (c) 1982, 2014, Oracle and/or its affiliates.  All rights reserved.
+
+Path used:      Conventional
+Commit point reached - logical record count 1
+
+Table IMP_CR:
+  1 Row successfully loaded.
+
+Check the log file:
+  CustomerRelation.log
+for more information about the load.
+
+D:\automatedmigration\Partner>if ERRORLEVEL 1 GOTO fout 
+
+D:\automatedmigration\Partner>sqlplus c##staging2/canon @craction.sql 
+
+SQL*Plus: Release 12.1.0.2.0 Production on Tue Sep 20 14:44:05 2016
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Last Successful login time: Tue Sep 20 2016 14:44:05 +02:00
+
+Connected to:
+Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+
+1 row updated.
+
+
+Commit complete.
+
+Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+D:\automatedmigration\Partner>if ERRORLEVEL 1 GOTO fout 
+
+D:\automatedmigration\Partner>sqlplus c##staging2/canon @caaction.sql 
+
+SQL*Plus: Release 12.1.0.2.0 Production on Tue Sep 20 14:44:05 2016
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Last Successful login time: Tue Sep 20 2016 14:44:05 +02:00
+
+Connected to:
+Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+
+28 rows updated.
+
+
+Commit complete.
+
+Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+D:\automatedmigration\Partner>if ERRORLEVEL 1 GOTO fout 
+
+D:\automatedmigration\Partner>sqlplus c##staging2/canon @checkload.sql 
+
+SQL*Plus: Release 12.1.0.2.0 Production on Tue Sep 20 14:44:05 2016
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Last Successful login time: Tue Sep 20 2016 14:44:05 +02:00
+
+Connected to:
+Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+
+PL/SQL procedure successfully completed.
+
+Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+D:\automatedmigration\Partner>IF NOT ERRORLEVEL 1 GOTO :EOF 
+
+D:\automatedmigration\Partner>if NOT ERRORLEVEL 1 GOTO SCS 
+
+D:\automatedmigration\Partner>cd D:\automatedmigration\ 
+test0 
+
+D:\automatedmigration>"C:\Program Files\Java\jdk1.8.0_91\bin\java.exe" -jar jmxterm-1.0-alpha-4-uber.jar --noninteract --exitonfailure --user admin --password admin --url service:jmx:rmi://localhost/jndi/rmi://localhost:9021/canon-SERVICES --input migPartner.jmx 
+55
+
+D:\automatedmigration>cd D:\automatedmigration\Partner 
+
+D:\automatedmigration\Partner>call checkloadcustomer.cmd 
+
+D:\automatedmigration\Partner>rem export NLS_LANG=AMERICAN_AMERICA.WE8ISO8859P1 
+
+D:\automatedmigration\Partner>set ORACLE_SID=ORCL 
+
+D:\automatedmigration\Partner>sqlplus c##staging2/canon @checkAfterload.sql 
+
+SQL*Plus: Release 12.1.0.2.0 Production on Tue Sep 20 14:44:08 2016
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Last Successful login time: Tue Sep 20 2016 14:44:05 +02:00
+
+Connected to:
+Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+DECLARE
+*
+ERROR at line 1:
+ORA-20000:
+ORA-06512: at line 8
+
+
+Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+D:\automatedmigration\Partner>echo 20000 
+20000
+
+D:\automatedmigration\Partner>if NOT ERRORLEVEL 1 GOTO :EOF 
+
+D:\automatedmigration\Partner>exit /b 1 
+
+D:\automatedmigration\Partner>echo 1 
+1
+
+D:\automatedmigration\Partner>if NOT ERRORLEVEL 1 GOTO SCS 
+
+D:\automatedmigration\Partner>echo error : laod partner data finished with error  1>>automigration.log 
+
+D:\automatedmigration\Partner>exit /b 1 

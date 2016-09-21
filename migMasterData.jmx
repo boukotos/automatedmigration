@@ -1,0 +1,1 @@
+run --bean net.pearlchain.buildit.interfacing:name=interfacingServiceImpl,type=InterfacingServiceImpl putMessagesFromFileOnQueue "D:/automatedmigration/masterdata/product.xml" "ProductIn"

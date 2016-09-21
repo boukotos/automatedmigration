@@ -1,0 +1,78 @@
+
+SQL*Loader: Release 12.1.0.2.0 - Production on Tue Sep 20 14:44:05 2016
+
+Copyright (c) 1982, 2014, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   CustomerAccount.ctl
+Character Set UTF8 specified for all input.
+
+Data File:      CustomerAccount.txt
+  Bad File:     CustomerAccount.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 1
+Errors allowed: 50
+Bind array:     64 rows, maximum of 256000 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table IMP_CA, loaded from every logical record.
+Insert option in effect for this table: TRUNCATE
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+CAREF                               FIRST     *   ,  O(") CHARACTER            
+CANO                                 NEXT     *   ,  O(") CHARACTER            
+CACOMP                               NEXT     *   ,  O(") CHARACTER            
+CACURREF                             NEXT     *   ,  O(") CHARACTER            
+CANAME                               NEXT     *   ,  O(") CHARACTER            
+CAADD                                NEXT     *   ,  O(") CHARACTER            
+CACUST                               NEXT     *   ,  O(") CHARACTER            
+CAVATNUM                             NEXT     *   ,  O(") CHARACTER            
+CANOVAT                              NEXT     *   ,  O(") CHARACTER            
+CASALEREP                            NEXT     *   ,  O(") CHARACTER            
+CASUPP                               NEXT     *   ,  O(") CHARACTER            
+CAVATREQ                             NEXT     *   ,  O(") CHARACTER            
+CALNGREF                             NEXT     *   ,  O(") CHARACTER            
+CACNTRREF                            NEXT     *   ,  O(") CHARACTER            
+CATRANS                              NEXT     *   ,  O(") CHARACTER            
+CACUSTTYPE                           NEXT     *   ,  O(") CHARACTER            
+CADUNS                               NEXT     *   ,  O(") CHARACTER            
+CATAXID                              NEXT     *   ,  O(") CHARACTER            
+CABSCC                               NEXT     *   ,  O(") CHARACTER            
+CACREDCSTAT                          NEXT     *   ,  O(") CHARACTER            
+CAINTSTAT                            NEXT     *   ,  O(") CHARACTER            
+CAMPRTNAME                           NEXT     *   ,  O(") CHARACTER            
+CAMPRTNACE                           NEXT     *   ,  O(") CHARACTER            
+CAMEMPNUM                            NEXT     *   ,  O(") CHARACTER            
+CAMPRTTURN                           NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "TO_NUMBER(:CAMPRTTURN, '99999999.99')"
+CACUSTSTAT                           NEXT     *   ,  O(") CHARACTER            
+CAACTION                             NEXT     *   ,  O(") CHARACTER            
+
+value used for ROWS parameter changed from 64 to 36
+
+Table IMP_CA:
+  28 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 250776 bytes(36 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          1
+Total logical records read:            28
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Tue Sep 20 14:44:05 2016
+Run ended on Tue Sep 20 14:44:05 2016
+
+Elapsed time was:     00:00:00.08
+CPU time was:         00:00:00.01

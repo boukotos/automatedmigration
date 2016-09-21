@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><pe:multi-company-product-dtos xmlns:pe="http://www.pearlchain.net">
+   <pe:multi-company-product-dto pe:message-status="S">
+      <external-reference>3592B021</external-reference>
+      <prl:CompanyAssignments xmlns:prl="http://www.pearlchain.net">
+         <pe:CompanyAssignment>
+            <CompanyReference>MASTER</CompanyReference>
+            <ProductStatus>PS.3</ProductStatus>
+         </pe:CompanyAssignment>
+      </prl:CompanyAssignments>
+      <pe:MultiLanguageDescriptions>
+         <pe:MultiLanguageDescription>
+            <Locale>en-GB</Locale>
+            <Description>DSC IXUS 100 IS SIL GB</Description>
+         </pe:MultiLanguageDescription>
+      </pe:MultiLanguageDescriptions>
+      <pe:property-dto name="ObjectType">ItemObjectType</pe:property-dto>
+      <pe:property-dto name="ItemNumber">3592B021</pe:property-dto>
+      <pe:property-dto name="Entitlement.Classification">ENTT.PACK</pe:property-dto>
+      <pe:property-dto name="Entitlement.SubClassification">ENTST.PROMOPACK</pe:property-dto>
+      <pe:property-dto name="ProductGroupCode">PGC.10</pe:property-dto>
+      <pe:property-dto name="MerchandiseClass">MCLASS.A</pe:property-dto>
+      <pe:property-dto name="SerialControlled">false</pe:property-dto>
+      <pe:property-dto name="IBaseTraceableItem">true</pe:property-dto>
+      <pe:property-dto name="CollectableItem">false</pe:property-dto>
+      <pe:property-dto name="CemisProductGroup">CPG.BQ</pe:property-dto>
+      <pe:property-dto name="StockUOM">uom.pc</pe:property-dto>
+      <pe:property-dto name="BusinessGroupCode">CIG</pe:property-dto>
+   </pe:multi-company-product-dto>
+</pe:multi-company-product-dtos>

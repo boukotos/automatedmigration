@@ -1,0 +1,5 @@
+run --bean net.pearlchain.prl.services.migration:name=canon-LoadCompanyIndependentDataJob,type=MigrationMBean migrate
+run --bean net.pearlchain.prl.services.migration:name=canon-LoadGLOBALDataJob,type=MigrationMBean migrate
+run --bean net.pearlchain.prl.services.migration:name=canon-LoadMASTERDataJob,type=MigrationMBean migrate
+run --bean net.pearlchain.prl.services.migration:name=canon-LoadNSODataJob,type=MigrationMBean migrateForRealm NLAAT
+run --bean net.pearlchain.prl.services.core.flb:name=prl-functionalLoadBalancingManager,type=FunctionalLoadBalancingManagerImpl publishServerRoles
