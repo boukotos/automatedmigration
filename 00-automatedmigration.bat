@@ -24,7 +24,6 @@ call 08-loadpartnerData.bat > automigration.log
 if NOT ERRORLEVEL 1 GOTO SCS
 exit /b 1
 :SCS
-echo test0 >> automigration.log
 call 09-jmxPartner.bat >> automigration.log
 if NOT ERRORLEVEL 1 GOTO jmxpartnersuccess
 echo error : laod partner jmxPartner >> automigration.log
@@ -45,7 +44,16 @@ call 10-checkjmxMasterdata.bat >> automigration.log
 if NOT ERRORLEVEL 1 GOTO checkJmxmasterdatasuccess
 exit /b 1
 :checkJmxmasterdatasuccess
-
+call 12-jmxPartnerRelation.bat >> automigration.log
+if NOT ERRORLEVEL 1 GOTO jmxPartnerRelation
+echo error : jmxPartnerRelation >> automigration.log
+exit /b 1
+:jmxPartnerRelation
+call 11-checkLoadPartnerRelation.bat >> automigration.log
+if NOT ERRORLEVEL 1 GOTO checkLoadPartnerRelationSuccess
+echo error : laod Partner Relation data finished with errors >> automigration.log
+exit /b 1
+checkLoadPartnerRelationSuccess
 
 REM echo %date% %time% >> automigration.log
 
