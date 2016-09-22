@@ -49,11 +49,24 @@ if NOT ERRORLEVEL 1 GOTO jmxPartnerRelation
 echo error : jmxPartnerRelation >> automigration.log
 exit /b 1
 :jmxPartnerRelation
-call 11-checkLoadPartnerRelation.bat >> automigration.log
+call 13-checkLoadPartnerRelation.bat >> automigration.log
 if NOT ERRORLEVEL 1 GOTO checkLoadPartnerRelationSuccess
-echo error : laod Partner Relation data finished with errors >> automigration.log
+echo error : checkLoadPartnerRelation errors >> automigration.log
 exit /b 1
 checkLoadPartnerRelationSuccess
+echo laoding Partner Relation data finished  >> automigration.log
+
+call 14-jmxProductproperties.bat >> automigration.log
+if NOT ERRORLEVEL 1 GOTO jmxPartnerRelation
+echo error : jmxProductproperties >> automigration.log
+exit /b 1
+:jmxPartnerRelation
+call 14-checkLoadProductproperties.bat >> automigration.log
+if NOT ERRORLEVEL 1 GOTO checkLoadProductpropertiesSuccess
+echo error : checkLoadProductproperties errors >> automigration.log
+exit /b 1
+checkLoadProductpropertiesSuccess
+echo laoding productproperties data finished  >> automigration.log
 
 REM echo %date% %time% >> automigration.log
 
