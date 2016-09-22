@@ -1,1 +1,16 @@
 run --bean net.pearlchain.buildit.interfacing:name=interfacingServiceImpl,type=InterfacingServiceImpl putMessagesFromFileOnQueue "D:/automatedmigration/masterdata/product.xml" "ProductIn"
+
+run --bean net.pearlchain.buildit.interfacing:name=interfacingServiceImpl,type=InterfacingServiceImpl putMessagesFromFileOnQueue "D:/automatedmigration/masterdata/templates/Meter.txt" "migration"
+run --bean net.pearlchain.buildit.interfacing:name=interfacingServiceImpl,type=InterfacingServiceImpl putMessagesFromFileOnQueue "D:/automatedmigration/masterdata/templates/MeterClass.txt" "migration"
+run --bean net.pearlchain.buildit.interfacing:name=interfacingServiceImpl,type=InterfacingServiceImpl putMessagesFromFileOnQueue "D:/automatedmigration/masterdata/templates/Template.txt" "migration"
+run --bean net.pearlchain.buildit.interfacing:name=interfacingServiceImpl,type=InterfacingServiceImpl putMessagesFromFileOnQueue "D:/automatedmigration/masterdata/templates/TemplateBOM.txt" "migration"
+run --bean net.pearlchain.buildit.interfacing:name=interfacingServiceImpl,type=InterfacingServiceImpl putMessagesFromFileOnQueue "D:/automatedmigration/masterdata/templates/Scheme.txt" "migration"
+run --bean net.pearlchain.buildit.interfacing:name=interfacingServiceImpl,type=InterfacingServiceImpl putMessagesFromFileOnQueue "D:/automatedmigration/masterdata/templates/SchemeBOM.txt" "migration"
+
+
+run --bean net.pearlchain.buildit.interfacing:name=interfacingServiceImpl,type=InterfacingServiceImpl putMessagesFromFileOnQueue "D:/automatedmigration/masterdata/products/Item.txt" "ProductIn"
+run --bean net.pearlchain.buildit.interfacing:name=interfacingServiceImpl,type=InterfacingServiceImpl putMessagesFromFileOnQueue "D:/automatedmigration/masterdata/products/Model.txt" "ProductIn"
+run --bean net.pearlchain.buildit.interfacing:name=interfacingServiceImpl,type=InterfacingServiceImpl putMessagesFromFileOnQueue "D:/automatedmigration/masterdata/products/ModelSeries.txt" "ProductIn"
+run --bean net.pearlchain.buildit.interfacing:name=interfacingServiceImpl,type=InterfacingServiceImpl putMessagesFromFileOnQueue "D:/automatedmigration/masterdata/products/ModelSeriesBOM.txt" "ProductIn"
+run --bean net.pearlchain.buildit.interfacing:name=interfacingServiceImpl,type=InterfacingServiceImpl putMessagesFromFileOnQueue "D:/automatedmigration/masterdata/products/ModelBOM.txt" "ProductIn"
+
