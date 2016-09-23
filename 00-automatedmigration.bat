@@ -53,8 +53,15 @@ call 13-checkLoadPartnerRelation.bat >> automigration.log
 if NOT ERRORLEVEL 1 GOTO checkLoadPartnerRelationSuccess
 echo error : checkLoadPartnerRelation errors >> automigration.log
 exit /b 1
-checkLoadPartnerRelationSuccess
+:checkLoadPartnerRelationSuccess
 echo laoding Partner Relation data finished  >> automigration.log
+
+call 14-LoadProductproperties.bat >> automigration.log
+if NOT ERRORLEVEL 1 GOTO LoadProductproperties
+echo error : LoadProductproperties >> automigration.log
+exit /b 1
+:LoadProductproperties
+echo laoding productproperties data finished  >> automigration.log
 
 call 14-jmxProductproperties.bat >> automigration.log
 if NOT ERRORLEVEL 1 GOTO jmxPartnerRelation
@@ -66,7 +73,7 @@ if NOT ERRORLEVEL 1 GOTO checkLoadProductpropertiesSuccess
 echo error : checkLoadProductproperties errors >> automigration.log
 exit /b 1
 checkLoadProductpropertiesSuccess
-echo laoding productproperties data finished  >> automigration.log
+echo check laoding productproperties data finished  >> automigration.log
 
 REM echo %date% %time% >> automigration.log
 
