@@ -1,0 +1,1 @@
+run --bean net.pearlchain.canon.services.migration.job:name=canon-IbaseConfigurationContactJob,type=MigrationMBeanCanon migrateFromStagingForRealm NLAAT
