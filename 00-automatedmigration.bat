@@ -171,6 +171,25 @@ echo error : checkLoadContract errors >> automigration.log
 exit /b 1
 :checkLoadContractSuccess
 
+call 32-LoadMinimumVolume.bat >> automigration.log
+if NOT ERRORLEVEL 1 GOTO LoadMinimumVolume
+echo error : LoadMinimumVolume >> automigration.log
+exit /b 1
+:LoadMinimumVolume
+echo laoding LoadMinimumVolume data finished  >> automigration.log
+
+call 33-jmxLoadMinimumVolume.bat >> automigration.log
+if NOT ERRORLEVEL 1 GOTO jmxLoadMinimumVolume
+echo error : jmxLoadMinimumVolume >> automigration.log
+exit /b 1
+:jmxLoadMinimumVolume
+
+call 34-checkLoadMinimumVolume.bat >> automigration.log
+if NOT ERRORLEVEL 1 GOTO checkLoadMinimumVolumeSuccess
+echo error : checkLoadMinimumVolume errors >> automigration.log
+exit /b 1
+:checkLoadMinimumVolumeSuccess
+
 
 REM echo %date% %time% >> automigration.log
 

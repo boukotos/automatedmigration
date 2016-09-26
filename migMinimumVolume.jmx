@@ -1,0 +1,1 @@
+run --bean net.pearlchain.canon.services.migration.job:name=canon-StagingMinimumVolumeMigrationJob,type=MigrationMBeanCanon migrateFromStagingForRealm NLAAT
