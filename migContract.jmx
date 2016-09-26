@@ -1,1 +1,1 @@
-run --bean net.pearlchain.canon.services.migration.job:name=canon-MeterReadsMigration,type=MigrationMBeanCanon migrateFromStagingForRealm NLAAT
+run --bean net.pearlchain.canon.services.migration.job:name=canon-StagingDealSheetsMigrationJob,type=MigrationMBeanCanon migrateFromStagingForRealm NLAAT
