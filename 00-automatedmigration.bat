@@ -129,9 +129,48 @@ exit /b 1
 
 call 25-checkConfigurationContact.bat >> automigration.log
 if NOT ERRORLEVEL 1 GOTO checkLoadConfigurationContactSuccess
-echo error : checkLoadMeterRead errors >> automigration.log
+echo error : checkLoadConfigurationContact errors >> automigration.log
 exit /b 1
 :checkLoadConfigurationContactSuccess
+
+call 26-LoadConfigurationRelation.bat >> automigration.log
+if NOT ERRORLEVEL 1 GOTO LoadConfigurationRelation
+echo error : LoadConfigurationRelation >> automigration.log
+exit /b 1
+:LoadConfigurationRelation
+echo laoding ConfigurationContact data finished  >> automigration.log
+
+call 27-jmxConfigurationRelation.bat >> automigration.log
+if NOT ERRORLEVEL 1 GOTO jmxConfigurationRelation
+echo error : jmxConfigurationRelation >> automigration.log
+exit /b 1
+:jmxConfigurationRelation
+
+call 28-checkConfigurationRelation.bat >> automigration.log
+if NOT ERRORLEVEL 1 GOTO checkConfigurationContactSuccess
+echo error : checkLoadConfigurationRelaction errors >> automigration.log
+exit /b 1
+:checkConfigurationRelationSuccess
+
+call 29-Loadcontracts.bat >> automigration.log
+if NOT ERRORLEVEL 1 GOTO Loadcontracts
+echo error : Loadcontracts >> automigration.log
+exit /b 1
+:Loadcontracts
+echo laoding Loadcontracts data finished  >> automigration.log
+
+call 30-jmxContracts.bat >> automigration.log
+if NOT ERRORLEVEL 1 GOTO jmxContracts
+echo error : jmxContracts >> automigration.log
+exit /b 1
+:jmxContracts
+
+call 31-checkLoadContract.bat >> automigration.log
+if NOT ERRORLEVEL 1 GOTO checkLoadContractSuccess
+echo error : checkLoadContract errors >> automigration.log
+exit /b 1
+:checkLoadContractSuccess
+
 
 REM echo %date% %time% >> automigration.log
 

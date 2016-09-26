@@ -8,5 +8,3 @@ echo  error : checkloadConfigurationContact >> automigration.log
 exit /b 1
 :fout
 exit /b 1
-
-pause
