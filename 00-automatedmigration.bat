@@ -71,13 +71,11 @@ echo error : LoadProductproperties >> automigration.log
 exit /b 1
 :LoadProductproperties
 echo laoding productproperties data finished  >> automigration.log
-
 call 15-jmxProductproperties.bat >> automigration.log
 if NOT ERRORLEVEL 1 GOTO jmxPartnerRelation
 echo error : jmxProductproperties >> automigration.log
 exit /b 1
 :jmxPartnerRelation
-
 call 16-checkLoadProductproperties.bat >> automigration.log
 if NOT ERRORLEVEL 1 GOTO checkLoadProductpropertiesSuccess
 echo error : checkLoadProductproperties errors >> automigration.log
@@ -94,13 +92,11 @@ echo error : LoadMinimumVolume >> automigration.log
 exit /b 1
 :LoadMinimumVolume
 echo laoding LoadMinimumVolume data finished  >> automigration.log
-
 call 33-jmxLoadMinimumVolume.bat >> automigration.log
 if NOT ERRORLEVEL 1 GOTO jmxLoadMinimumVolume
 echo error : jmxLoadMinimumVolume >> automigration.log
 exit /b 1
 :jmxLoadMinimumVolume
-
 call 34-checkLoadMinimumVolume.bat >> automigration.log
 if NOT ERRORLEVEL 1 GOTO checkLoadMinimumVolumeSuccess
 echo error : checkLoadMinimumVolume errors >> automigration.log
@@ -116,13 +112,11 @@ echo error : LoadConfiguration >> automigration.log
 exit /b 1
 :LoadConfiguration
 echo laoding LoadConfiguration data finished  >> automigration.log
-
 call 18-jmxConfiguration.bat >> automigration.log
 if NOT ERRORLEVEL 1 GOTO jmxConfiguration
 echo error : jmxConfiguration >> automigration.log
 exit /b 1
 :jmxConfiguration
-
 call 19-checkLoadConfiguration.bat >> automigration.log
 if NOT ERRORLEVEL 1 GOTO checkLoadConfigurationSuccess
 echo error : checkLoadConfiguration errors >> automigration.log
@@ -137,13 +131,11 @@ echo error : LoadMeterRead >> automigration.log
 exit /b 1
 :LoadMeterRead
 echo laoding LoadMeterRead data finished  >> automigration.log
-
 call 21-jmxMeterRead.bat >> automigration.log
 if NOT ERRORLEVEL 1 GOTO jmxMeterRead
 echo error : jmxMeterRead >> automigration.log
 exit /b 1
 :jmxMeterRead
-
 call 22-checkLoadMeterRead.bat >> automigration.log
 if NOT ERRORLEVEL 1 GOTO checkLoadMeterReadSuccess
 echo error : checkLoadMeterRead errors >> automigration.log
@@ -158,14 +150,11 @@ if NOT ERRORLEVEL 1 GOTO LoadConfigurationContact
 echo error : LoadConfigurationContact >> automigration.log
 exit /b 1
 :LoadConfigurationContact
-echo laoding ConfigurationContact data finished  >> automigration.log
-
 call 24-jmxConfigurationContact.bat >> automigration.log
 if NOT ERRORLEVEL 1 GOTO jmxConfigurationContact
 echo error : jmxConfigurationContact >> automigration.log
 exit /b 1
 :jmxConfigurationContact
-
 call 25-checkConfigurationContact.bat >> automigration.log
 if NOT ERRORLEVEL 1 GOTO checkLoadConfigurationContactSuccess
 echo error : checkLoadConfigurationContact errors >> automigration.log
@@ -180,14 +169,11 @@ if NOT ERRORLEVEL 1 GOTO LoadConfigurationRelation
 echo error : LoadConfigurationRelation >> automigration.log
 exit /b 1
 :LoadConfigurationRelation
-echo laoding ConfigurationContact data finished  >> automigration.log
-
 call 27-jmxConfigurationRelation.bat >> automigration.log
 if NOT ERRORLEVEL 1 GOTO jmxConfigurationRelation
 echo error : jmxConfigurationRelation >> automigration.log
 exit /b 1
 :jmxConfigurationRelation
-
 call 28-checkConfigurationRelation.bat >> automigration.log
 if NOT ERRORLEVEL 1 GOTO checkConfigurationContactSuccess
 echo error : checkLoadConfigurationRelaction errors >> automigration.log
@@ -202,14 +188,11 @@ if NOT ERRORLEVEL 1 GOTO Loadcontracts
 echo error : Loadcontracts >> automigration.log
 exit /b 1
 :Loadcontracts
-echo laoding Loadcontracts data finished  >> automigration.log
-
 call 30-jmxContracts.bat >> automigration.log
 if NOT ERRORLEVEL 1 GOTO jmxContracts
 echo error : jmxContracts >> automigration.log
 exit /b 1
 :jmxContracts
-
 call 31-checkLoadContract.bat >> automigration.log
 if NOT ERRORLEVEL 1 GOTO checkLoadContractSuccess
 echo error : checkLoadContract errors >> automigration.log

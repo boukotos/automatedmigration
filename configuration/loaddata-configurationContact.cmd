@@ -1,5 +1,4 @@
 set ORACLE_SID=ORCL
-
 sqlldr c##staging2/canon ConfigurationContact.ctl
 if ERRORLEVEL 1 GOTO fout
 sqlplus c##staging2/canon @checkloadConfigurationContact.sql

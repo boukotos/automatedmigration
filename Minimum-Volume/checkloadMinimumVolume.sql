@@ -5,7 +5,7 @@ DECLARE
    counter NUMBER;
 BEGIN
 SELECT count(0) INTO counter FROM IMP_MIN;
-IF counter!=123 THEN 
+IF counter!=18 THEN 
 	RAISE migration_error;
 END IF;
 END;

@@ -1,6 +1,5 @@
 rem export NLS_LANG=AMERICAN_AMERICA.WE8ISO8859P1
 set ORACLE_SID=ORCL
-
 sqlldr c##staging2/canon configurationRelation.ctl
 if ERRORLEVEL 1 GOTO fout
 sqlplus c##staging2/canon @checkloadConfigurationRelation.sql
