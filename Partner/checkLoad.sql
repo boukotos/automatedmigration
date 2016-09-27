@@ -8,7 +8,7 @@ SELECT count(0) INTO counter FROM IMP_AD;
 IF counter!=123 THEN 
 	RAISE migration_error;
 END IF;
-/* SELECT count(0) INTO counter FROM IMP_ADR;
+SELECT count(0) INTO counter FROM IMP_ADR;
 IF counter!=280 THEN 
 	RAISE migration_error;
 END IF;
@@ -23,7 +23,7 @@ END IF;
 SELECT count(0) INTO counter FROM IMP_CV;
 IF counter!=27 THEN 
 	RAISE migration_error;
-END IF; */
+END IF;
 END;
 /
 exit;

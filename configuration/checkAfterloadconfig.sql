@@ -4,7 +4,7 @@ DECLARE
    PRAGMA EXCEPTION_INIT(migration_error, -20000);
    counter NUMBER;
 BEGIN
-SELECT count(0) INTO counter FROM CI WHERE CISTAT ='FINISHED';
+SELECT count(0) INTO counter FROM CI WHERE CISTAT ='FAILED';
 IF counter!=0 THEN 
 	RAISE migration_error;
 END IF;
