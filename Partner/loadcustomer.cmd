@@ -1,23 +1,23 @@
 rem export NLS_LANG=AMERICAN_AMERICA.WE8ISO8859P1
 set ORACLE_SID=ORCL
-sqlplus c##staging2/canon @truncate.sql
+sqlplus pearlautsta/pearlchain @truncate.sql
 echo %ERRORLEVEL%
 if ERRORLEVEL 1 GOTO fout
-sqlldr c##staging2/canon CustomerAccount.ctl
+sqlldr pearlautsta/pearlchain CustomerAccount.ctl
 if ERRORLEVEL 1 GOTO fout
-sqlldr c##staging2/canon CustomerVAT.ctl
+sqlldr pearlautsta/pearlchain CustomerVAT.ctl
 if ERRORLEVEL 1 GOTO fout
-sqlldr c##staging2/canon Address.ctl
+sqlldr pearlautsta/pearlchain Address.ctl
 if ERRORLEVEL 1 GOTO fout
-sqlldr c##staging2/canon AddressRole.ctl
+sqlldr pearlautsta/pearlchain AddressRole.ctl
 if ERRORLEVEL 1 GOTO fout
-sqlldr c##staging2/canon CustomerRelation.ctl
+sqlldr pearlautsta/pearlchain CustomerRelation.ctl
 if ERRORLEVEL 1 GOTO fout
-sqlplus c##staging2/canon @craction.sql
+sqlplus pearlautsta/pearlchain @craction.sql
 if ERRORLEVEL 1 GOTO fout
-sqlplus c##staging2/canon @caaction.sql
+sqlplus pearlautsta/pearlchain @caaction.sql
 if ERRORLEVEL 1 GOTO fout
-sqlplus c##staging2/canon @checkload.sql
+sqlplus pearlautsta/pearlchain @checkload.sql
 IF NOT ERRORLEVEL 1 GOTO :EOF
 echo  error : checkload >> automigration.log
 exit /b 1

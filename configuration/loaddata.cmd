@@ -1,15 +1,15 @@
 rem export NLS_LANG=AMERICAN_AMERICA.WE8ISO8859P1
 set ORACLE_SID=ORCL
 
-sqlldr c##staging2/canon metercomponent.ctl
+sqlldr pearlautsta/pearlchain metercomponent.ctl
 if ERRORLEVEL 1 GOTO fout
-sqlldr c##staging2/canon meterclasscomponent.ctl
+sqlldr pearlautsta/pearlchain meterclasscomponent.ctl
 if ERRORLEVEL 1 GOTO fout
-sqlldr c##staging2/canon component.ctl
+sqlldr pearlautsta/pearlchain component.ctl
 if ERRORLEVEL 1 GOTO fout
-sqlldr c##staging2/canon configuration.ctl
+sqlldr pearlautsta/pearlchain configuration.ctl
 if ERRORLEVEL 1 GOTO fout
-sqlplus c##staging2/canon @checkload.sql
+sqlplus pearlautsta/pearlchain @checkload.sql
 IF NOT ERRORLEVEL 1 GOTO :EOF
 echo  error : checkload >> automigration.log
 exit /b 1
