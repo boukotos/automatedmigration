@@ -5,39 +5,39 @@ DECLARE
    counter NUMBER;
 BEGIN
 SELECT count(0) INTO counter FROM IMP_GX;
-IF counter!=123 THEN 
+IF counter<0 THEN 
 	RAISE migration_error;
 END IF;
 SELECT count(0) INTO counter FROM IMP_GC;
-IF counter!=280 THEN 
+IF counter<0 THEN 
 	RAISE migration_error;
 END IF;
 SELECT count(0) INTO counter FROM IMP_IG;
-IF counter!=28 THEN 
+IF counter<0 THEN 
 	RAISE migration_error;
 END IF;
 SELECT count(0) INTO counter FROM IMP_CO;
-IF counter!=1 THEN 
+IF counter<0 THEN 
 	RAISE migration_error;
 END IF;
 SELECT count(0) INTO counter FROM IMP_TI;
-IF counter!=27 THEN 
+IF counter<0 THEN 
 	RAISE migration_error;
 END IF;
 SELECT count(0) INTO counter FROM IMP_RP;
-IF counter!=27 THEN 
+IF counter<0 THEN 
 	RAISE migration_error;
 END IF;
 SELECT count(0) INTO counter FROM IMP_CB;
-IF counter!=27 THEN 
+IF counter<0 THEN 
 	RAISE migration_error;
 END IF;
 SELECT count(0) INTO counter FROM IMP_C2;
-IF counter!=27 THEN 
+IF counter<0 THEN 
 	RAISE migration_error;
 END IF;
 SELECT count(0) INTO counter FROM IMP_COR;
-IF counter!=27 THEN 
+IF counter<0 THEN 
 	RAISE migration_error;
 END IF; 
 

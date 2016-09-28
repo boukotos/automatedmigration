@@ -12,7 +12,12 @@ LOOP
    dbms_lock.sleep( 2 ); 
 END LOOP;
 
-SELECT count(0) INTO counter FROM if_message WHERE QUEUENAME in ('ProductIn','migration') AND STATUS = 'ERROR';
+SELECT count(0) INTO counter FROM if_message WHERE QUEUENAME = 'migration' AND STATUS = 'ERROR';
+IF counter!=0 THEN 
+	RAISE migration_error;
+END IF;
+
+SELECT count(0) INTO counter FROM if_message2 WHERE QUEUENAME = 'ProductIn' AND STATUS = 'ERROR';
 IF counter!=0 THEN 
 	RAISE migration_error;
 END IF;
